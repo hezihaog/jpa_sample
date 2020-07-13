@@ -20,7 +20,7 @@ import java.util.List;
  * @version 1.0
  * @date 2020/7/13 6:26 下午
  * <p>
- * 多表查询测试
+ * 条件查询测试
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "classpath:applicationContext.xml")
