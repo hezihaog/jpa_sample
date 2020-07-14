@@ -94,8 +94,12 @@ public class Customer {
      *      2.CascadeType.MERGE：更新
      *      3.CascadeType.PERSIST：保存
      *      4.CascadeType.REMOVE：删除
+     *
+     *  fetchType：配置关联对象的加载方式
+     *      1.EAGER：立即加载
+     *      2.LAZY：延迟加载（懒加载）
      */
-    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Set<LinkMan> linkmans = new HashSet<LinkMan>(0);
 
     public Long getCustId() {

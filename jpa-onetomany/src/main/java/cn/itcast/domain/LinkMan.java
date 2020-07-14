@@ -58,7 +58,7 @@ public class LinkMan {
      * 注解@ManyToOne：配置多对一关系，targetEntity：对象的实体类的类型
      * 注解@JoinColumn，配置外键，name：外键名称，referencedColumnName参照的主表的主键名称
      */
-    @ManyToOne(targetEntity = Customer.class)
+    @ManyToOne(targetEntity = Customer.class, fetch = FetchType.LAZY)
     //外键lkm_cust_id，引用主表的cust_id
     @JoinColumn(name = "lkm_cust_id", referencedColumnName = "cust_id")
     private Customer customer;
@@ -146,7 +146,6 @@ public class LinkMan {
                 ", lkmEmail='" + lkmEmail + '\'' +
                 ", lkmPosition='" + lkmPosition + '\'' +
                 ", lkmMemo='" + lkmMemo + '\'' +
-                ", customer=" + customer +
                 '}';
     }
 }
