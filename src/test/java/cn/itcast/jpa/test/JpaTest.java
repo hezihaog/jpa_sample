@@ -132,7 +132,7 @@ public class JpaTest {
     }
 
     /**
-     * 测试删除
+     * 测试更新
      */
     @Test
     public void testUpdate() {
